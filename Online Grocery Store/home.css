@@ -1,0 +1,323 @@
+body
+{
+font-family:'Arial', sans-serif;
+margin:0;
+padding:0;
+background-color:#f4f4f9;
+color:#333;
+}
+
+.navbar
+{
+position:fixed;
+overflow:hidden;
+top:0;
+width:100%;
+z-index:1000;
+}
+
+.navbar ul
+{
+list-style-type:none;
+}
+
+.navlist
+{
+background-color:#FF7833;
+color:white;
+margin:auto;
+padding:20px;
+display:flex;
+justify-content:end;
+gap:50px;
+}
+
+.navlist li a
+{
+  text-decoration:none;
+  color:rgb(241, 233, 217);
+  font-weight: bold;
+}
+.navlist li a:hover
+{
+  color: black;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+#mname
+{
+  font-family:sans-serif;
+  font-weight: bold;
+  color: #333;
+
+}
+.content
+{
+margin-top:60px;
+}
+
+.content-section
+{
+display:none;
+margin-top:50px;
+}
+
+.content-section.active
+{
+display:block;
+}
+
+.container
+{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+padding:30px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: 16px;
+  height: 300px;
+  box-sizing:border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 32px);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit:cover;
+  max-height: 150px; /* Adjust based on your needs */
+  margin-bottom: 16px;
+}
+
+.card h2
+{
+font-size:1.2em;
+}
+
+.card p
+{
+font-size:1.1em;
+color:#555;
+margin: 0;
+}
+
+.card button, .btn button, .checkout, .proceedbtn
+{
+background-color:#28a745;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.card button:hover, .btn button:hover, .checkout:hover, .proceedbtn:hover
+{
+background-color:#218838;
+}
+#invoice
+{
+  background-color: #b5eaff;
+  box-sizing:border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#invoice h1
+{
+  color: rgb(0, 165, 0);
+}
+.card img
+{
+width:60%;
+height:40%;
+border-radius:5px;
+}
+#carthead
+{
+  font-size:larger;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.719);
+  display: flex;
+  justify-content: center;
+}
+.ecartimg
+{
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  width: auto;
+}
+
+#bottom
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#bottom p
+{
+  color: rgba(0, 0, 0, 0.719);
+}
+#bottom img
+{
+  height: 60vh;
+  width: auto;
+}
+#viewhome a
+{
+  text-decoration: none;
+}
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: none;
+  }
+  #cart-table th, #cart-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #cart-table th {
+    background-color: #f2f2f2;
+  }
+  
+  #cart-table img {
+    display: block;
+    margin: 0 auto;
+  }
+  #ctp
+  {
+    display: none;
+    font-weight: bold;
+    font-size: larger;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 500px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .popup.show {
+    display: block;
+    opacity: 1;
+  }
+  .tnx
+  {
+    margin: 100px ;
+    padding: 20px;
+  }
+  /* Add this to home.css */
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+.myp
+{
+  display: flex;
+  justify-content: center;
+}
+.lp img
+{
+  height: 50vh;
+}
+.lp
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rp
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+}
+.lp p
+{
+  font-size: medium;
+  color:#042f66;
+}
+.lp h1, .lp h2, .rp h2{
+  color: #2596be;
+}
+#profileForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#profileForm p {
+  margin: 10px 0;
+}
+
+#profileForm input,
+#profileForm textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+#profileForm .btn {
+  margin-top: 10px;
+}
+
+#profileForm .btn button {
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+#checkout
+{
+  display: none;
+}
+#viewhome
+{
+  display: block;
+}
+.content-section {
+  padding: 20px;
+  margin: 20px;
+}
+
+#pricing-details
+{
+  margin: 20px 20px 20px 10px;
+  padding: 20px 20px 20px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: light;
+}
+#transaction-form
+{
+  display: block;
+}
+#transaction-form fieldset {
+  margin-bottom: 20px;
+}
+
+#pricing-details p {
+  margin: 5px 0;
+}
+
+#invoice {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 20px;
+}

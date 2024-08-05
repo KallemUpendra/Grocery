@@ -1,0 +1,38 @@
+SlNo	Feature	Story number	Description (Card)	Acceptance Criteria (Confirmation)	Initial Size Estimate (SP)	Business Priority 	Sprint Number
+1	My Profile Page 	US_UI_001	As an existing Customer, I want to be able to navigate through My Profile page.	"As part of 1_PBL_UI : US_UI_003, On the Navigation Bar, there is a hyperlink named ""My Profile"" which when clicked will route you to ""My Profile"" page.  
+
+* At the top, customer's name is displayed.  
+* Below that, all the details of the customer can be seen which were filled at the time of registration (as part of 1_PBL_UI : US_UI_001).  
+* Below these details, there will be 2 buttons:   
+    - Update : To edit/update any details, you click on this button and then above details will be editable.  
+    - Save: If any changes/updates are done , then click on this button to save the changed permanently, these updated values will be reflected in ""Registration Table"" (as part of 1_PBL_SQL : US_SQL_001)  
+
+** Navigation bar must be visible all the time."			
+2	Cart Page	US_UI_002	As an existing Customer, I want to be able to navigate through My Cart page.	"As part of 1_PBL_UI : US_UI_003, On the Navigation Bar, there is a hyperlink named ""Cart"" which when clicked will route you to ""Cart"" page.
+	- In case there are no items in the cart, then page must display ""Your cart is empty"" and below that there must be a hyperlink saying ""View Products"". If ""View Products"" is clicked then user is routed back to the home page (as part of 1_PBL_UI : US_UI_003) when all the products are visible.
+	- If user have some item(s) in the cart:
+		* On the left half of the page, they would be able to see the products that are in their cart and their individual prices.
+		* On the right half at top, they would see a ""Summary"" , which will show the product price listing and the ""Total Amount"".
+		* There would be delete button beside every product, to remove it from the cart.
+		* There would be a ""Checkout"" button below ""Summary"", by clicking on it you would be routed to the ""Transaction Page"" (as part of US_UI_003 – next user story) to complete the transaction and get the invoice.
+
+** Navigation bar must be visible all the time."			
+3	Transaction Page	US_UI_003	As part of US_UI_002 (previous user story), There would be a "Checkout" button below "Summary", by clicking on it you would be routed to the "Transaction" Page.	"As part of US_UI_002 (previous user story), There would be a ""Checkout"" button below ""Summary"", by clicking on it you would be routed to the ""Transaction"" Page.
+	* Here at the top, you would be asked to choose the payment method. To select the payment method you must have a various options in form of Radio Buttons.
+		- options: COD, UPI, Credit Card, Debit Card, Net Banking etc..
+	* Below payment method, there would be final pricing details, which would show:
+		- Total product Price
+		- Total Discount
+		- Extra Charges (GST, Delivery etc.)
+		- Order Total
+	* Below that you will have a button ""Proceed to Buy"", which when clicked will complete the transaction and will show you invoice on the same page.
+	* Invoice would show you the below details:
+		- Transaction ID 
+		- Customer ID 
+		- All Product ID 
+		- Total Amount 
+		- no_of_items 
+	All these will be then saved to the Transaction table (as part of 1_PBL_SQL  : US_SQL_004)
+
+** Navigation bar must be visible all the time."			
+			

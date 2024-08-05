@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="logincss.css">
+  </head>
+  <body>
+  <div class="main">
+  <div class="login">
+    <h1>Grocery Store - Login</h1>
+
+    <div id="login-form">
+      <h2>Login</h2>
+      <form onsubmit="return validateLogin()">
+        <p>Customer ID <input type="text" id="loginId" maxlength="50" /></p>
+        <p>
+          Password <input type="password" id="loginPassword" maxlength="30" />
+        </p>
+        <p class="message" id="loginMessage"></p>
+        <div class="btn">
+        <input type="submit" value="Login" class="btn"/>
+        </div>
+        <div class="lastline">
+        <p>
+          New User? 
+          <a href="registration.html" onclick="showRegisterForm()">Register Yourself</a>
+        </p>
+        </div>
+      </form>
+      </div>
+    </div>
+    </div>
+    <script src="loginscript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="regcss.css">
+  </head>
+  <body>
+  <div class="main" id="mainid">
+    <div class="reg">
+    <h1>Registration Form </h1>
+    <form id="registration-form" onsubmit="return validateForm()">
+      <p>Name <input type="text" name="name" id="cname" maxlength="50" /></p>
+      <p>Email <input type="email" name="mail" id="cmail" /></p>
+      <p>
+        Password
+        <input type="password" name="password" id="cpassword" maxlength="30" />
+      </p>
+      <p class="amng">
+        Address
+        <textarea name="address" id="caddress" maxlength="100"></textarea>
+      </p>
+      <p>
+        Contact
+        <input type="text" name="contact" id="ccontact" maxlength="10"/>
+      </p>
+      <div class="btn">
+      <input type="submit" value="Register" />
+      </div>
+      <div class="lastline">
+      <p>If already registered <a href="login.html">click here</a> to login</p>
+      </div>
+    </form>
+    </div>
+    </div>
+
+    <div id="acknowledgment" class="ack">
+      <h2>Customer Registration successful.</h2>
+      <p>Customer ID: <span id="customerId"></span></p>
+      <p>Customer Name: <span id="customerName"></span></p>
+      <p>Customer Email: <span id="customerEmail"></span></p>
+      <p><a href="login.html">click here</a> to login</p>
+    </div>
+    <script src="regscript.js"></script>
+  </body>
+</html>

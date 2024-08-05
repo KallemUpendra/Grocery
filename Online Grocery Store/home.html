@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class="navlist">
+        <li><a href="#" Onclick="showContent('home')">Home</a></li>
+        <li><a href="#myprofile" Onclick="showContent('myprofile')">My Profile</a></li>
+        <li><a href="#cart" Onclick="showContent('cart')">Cart</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <section id="home" class="content-section">
+        <p id="mname"></p>
+        <div class="container">
+          <div class="card">
+            <h2>Coffee</h2>
+            <img src="p1.png" />
+            <p>Price: ₹10</p>
+            <button Onclick="addToCart('Coffee', 10, 'p1.png')">Add to cart</button>
+          </div>
+          <div class="card">
+            <h2>Milk</h2>
+            <img src="p1.png" />
+            <p>Price: ₹20</p>
+            <button Onclick="addToCart('Milk', 20, 'p1.png')">Add to cart</button>
+          </div>
+          <div class="card">
+            <h2>Salt</h2>
+            <img src="p1.png" />
+            <p>Price: ₹30</p>
+            <button Onclick="addToCart('Salt', 30, 'p1.png')">Add to cart</button>
+          </div>
+          <div class="card">
+            <h2>Rice</h2>
+            <img src="p1.png" />
+            <p>Price: ₹40</p>
+            <button Onclick="addToCart('Rice', 40, 'p1.png')">Add to cart</button>
+          </div>
+          <div class="card">
+            <h2>Chocolate</h2>
+            <img src="p1.png" />
+            <p>Price: ₹50</p>
+            <button Onclick="addToCart('Chocolate', 50, 'p1.png')">Add to cart</button>
+          </div>
+          <div class="card">
+            <h2>Bread</h2>
+            <img src="p1.png" />
+            <p>Price: ₹60</p>
+            <button Onclick="addToCart('Bread', 60, 'p1.png')">Add to cart</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="cart" class="content-section">
+        <div id="carthead">Your cart is empty.</div>
+        <div id="bottom">
+          <img src="ecart.png" />
+          <p>Looks like you have not added anything to your cart.</p>
+          <div id="viewhome"><a href="javascript:void(0);" Onclick="showContent('home')">View Products</a></div>
+          
+        </div>
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Product Image</th>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+        <p id="ctp">Total: ₹<span id="total-price"></span></p>
+        <button class="checkout" id="checkout" onclick="showContent('transaction'); updateVal();">Checkout</button>
+      </section>
+      
+      
+      <section id="transaction" class="content-section">
+        
+        <form id="transaction-form">
+          <h2>Checkout</h2>
+            <fieldset>
+                <legend style="color: orangered; font-weight: 600;">Select Payment Method:</legend>
+                <label><input type="radio" name="payment-method" value="COD" /> Cash on Delivery</label><br />
+                <label><input type="radio" name="payment-method" value="UPI" /> UPI</label><br />
+                <label><input type="radio" name="payment-method" value="Credit Card" /> Credit Card</label><br />
+                <label><input type="radio" name="payment-method" value="Debit Card" /> Debit Card</label><br />
+                <label><input type="radio" name="payment-method" value="Net Banking" /> Net Banking</label>
+            </fieldset>
+            <div id="pricing-details">
+                <h3 >Pricing Details</h3>
+                <p>Total Product Price: ₹<span id="product-price"></span></p>
+                <p>Total Discount @12%: ₹<span id="discount"></span></p>
+                <p>Extra Charges(18% GST and ₹50 Delivery charges): ₹<span id="extra-charges"></span></p>
+                <p style="font-weight: bold;">Order Total: ₹<span id="order-total">0</span></p>
+            </div>
+            <button class="proceedbtn" type="button" onclick="completeTransaction()">Proceed to Buy</button>
+        </form>
+        <div id="invoice" style="display:none; font-family: sans-serif;">
+          <h1 class="tnxhead">Transaction Completed successfully.</h1>
+            <h3>Invoice</h3>
+            <p>Transaction ID: <span id="transaction-id"></span></p>
+            <p>Customer ID: <span id="customer-id"></span></p>
+            <p>Product IDs: <span id="product-ids"></span></p>
+            <p>Total Amount: ₹<span id="invoice-total"></span></p>
+            <p>Number of Items: <span id="number-of-items"></span></p>
+        </div>
+    </section>
+      
+      <section id="myprofile" class="content-section">
+        <div class="myp">
+          <div class="lp">
+            <h2>My Profile</h2>
+            <img src="profile.png">
+            <h1 id="profileName">Customer Name</h1>
+            <p>ID: <span id="profileId">Customer ID</span></p>
+          </div>
+          <div class="rp">
+            <form id="profileForm">
+              <h2>Details</h2>
+                <p>
+                    Name: <input type="text" id="profileNameInput" disabled />
+                </p>
+                <p>
+                    Email: <input type="email" id="profileEmail" disabled />
+                </p>
+                <p>
+                    Address: <textarea id="profileAddress" disabled></textarea>
+                </p>
+                <p>
+                    Contact: <input type="text" id="profileContact" disabled />
+                </p>
+                <p>
+                    Password: <input type="password" id="profilePassword" disabled />
+                </p>
+                <div class="btn">
+                    <button type="button" onclick="enableEditing()">Update</button>
+                    <button type="button" onclick="saveProfile()" id="saveButton" style="display:none;">Save</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+    
+    </div>
+    <div id="popup" class="popup"></div>
+    <script src="homescript.js"></script>
+  </body>
+</html>

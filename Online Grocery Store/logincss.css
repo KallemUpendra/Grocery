@@ -1,0 +1,82 @@
+body,html
+{
+    padding:0;
+    margin:0;
+}
+.message {
+        color: red;
+        margin-bottom:5px;
+}
+.main
+{
+    height:100vh;
+    background: rgb(231,154,21);
+    background: linear-gradient(90deg, rgba(231,154,21,1) 0%, rgba(255,134,40,1) 35%, rgba(255,166,0,1) 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+.login
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:white;
+    height:450px;
+    width:500px;
+    border-radius:15px;
+    padding-top:15px;
+}
+input[type="text"],input[type="password"]
+{
+    height:20px;
+    width:200px;
+    padding:5px 10px;
+    margin:10px 0 0 50px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    color:#333;
+    background-color:#f9f9f9;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease,box-shadow 0.3 ease;
+    outline:none;
+}
+input[type="text"]
+{
+    margin-left:29px;
+}
+
+input[type="submit"]
+{
+    margin-top:17px;
+	height:40px;
+	width:100px;
+	border: 1px solid;
+	border-radius:15px;
+	background-color:#00cc44;
+	color:white;
+	font-weight:600;
+    font-size:14px;
+}
+input[type="submit"]:hover
+{
+	cursor:pointer;
+	background-color:#009933;
+	transition:ease 500ms;
+}
+.lastline, .btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.login-form a
+{
+    text-decoration:none;
+}
+.message
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
